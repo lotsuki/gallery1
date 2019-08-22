@@ -1,9 +1,9 @@
 import React from 'react';
-@import 'title';
+import styles from '../index.scss';
 
 const Title = ({ title="Kitchen"}) => {
   return (
-    <div className={title}>{title}</div>
+    <div className="title">{title}</div>
   )
 };
 
