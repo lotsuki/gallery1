@@ -7,7 +7,7 @@ const Images = ({ images, col, wid, h }) => {
        <ImageMasonry
           imageUrls={images}
           numCols={2}
-          containerWidth={"800px"}
+          containerWidth={"900px"}
         />
     </div>
   )
@@ -16,17 +16,18 @@ const Images = ({ images, col, wid, h }) => {
 export default Images;
 
 //styles={{height: {height}, objectFit: 'cover'}}
+// { imageUrls={images.map(image => {
+//               return (
+//               <div key={image}>
+//                 <img 
+//                   src={image}
+//                   alt={image}
+//                 ></img>
+//               </div>
+//               )
+//             })}}
 
 
-//images.map(image => {
-            //   return (
-            //   <div key={image}>
-            //     <img 
-            //       src={image}
-            //       alt={image}
-            //     ></img>
-            //   </div>
-            //   )
-            // })
+
 
 

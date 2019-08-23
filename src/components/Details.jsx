@@ -8,5 +8,3 @@ const Details = ({details=['Gas oven, ', 'Gas stove']}) => {
 }
 
 export default Details;
-
-// {details.map(detail => <span key={detail}>{detail}</span>)}
