@@ -132,9 +132,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "proxy": "http://localhost:4000",
-  "devDependencies": {
-    "sass-loader": "^7.2.0"
   }
 }
