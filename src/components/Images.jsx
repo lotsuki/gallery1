@@ -1,19 +1,32 @@
 import React from 'react';
+import ImageMasonry from "react-image-masonry";
 
-const Images = ({ images }) => {
+const Images = ({ images, col, wid, h }) => {
   return (
-    <>
-      <div className="image-container">
-        {
-          images.map(image => (
-            <img key={image.public_id} src={`https://res.cloudinary.com/apartmentlist/image/upload/s--3zKUkn6n--/c_fill,dpr_auto,f_auto,g_center,h_415,q_auto,t_web-base,w_640/${image.public_id}.jpg`}></img>
-          ))
-        }
-      </div>
-    </>
+    <div className="image-container">
+       <ImageMasonry
+          imageUrls={images}
+          numCols={2}
+          containerWidth={"800px"}
+        />
+    </div>
   )
 }
 
 export default Images;
+
+//styles={{height: {height}, objectFit: 'cover'}}
+
+
+//images.map(image => {
+            //   return (
+            //   <div key={image}>
+            //     <img 
+            //       src={image}
+            //       alt={image}
+            //     ></img>
+            //   </div>
+            //   )
+            // })
 
 
