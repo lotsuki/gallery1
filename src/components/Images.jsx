@@ -1,12 +1,12 @@
 import React from 'react';
 import ImageMasonry from "react-image-masonry";
 
-const Images = ({ images, col, wid, h }) => {
+const Images = ({ images, col }) => {
   return (
     <div className="image-container">
        <ImageMasonry
           imageUrls={images}
-          numCols={2}
+          numCols={col}
           containerWidth={"900px"}
         />
     </div>
