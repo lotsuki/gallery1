@@ -2,10 +2,10 @@ import React from 'react';
 import Title from './Title.jsx';
 import Details from './Details.jsx';
 
-const Header = (props) => {
+const Header = ({ title }) => {
   return (
     <div className="header">
-    	<Title />
+    	<Title title={title}/>
     	<Details />
     </div>
   )

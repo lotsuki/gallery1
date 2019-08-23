@@ -8,15 +8,28 @@ const App = (props) => {
 	useEffect(() => {
 		fetch('https://als-image.herokuapp.com/assets/property/813769')
 	  .then(res => res.json())
-	  .then(data => setData(data))
+	  .then(data => {
+	  	let arrayData = [];
+	  	let obj = data.images;
+	  	for (var key in obj) {
+	  	  arrayData.push({title: key, images: obj[key]});
+	  	}
+	  	setData(arrayData)
+	  })
 	  .catch(err => { console.log('Could not fetch data: ', err); })
 	}, [])
 
-  return (
-  	<div className="container">
-	    <Header data={data}/>
-	    <Images data={data}/>
-    </div>
+  return ( 
+  	<>
+	    {
+			  data && data.map(room => (
+	        <div className="container" key={room.title}>
+						<Header title={room.title}/>
+			      <Images images={room.images}/>
+	        </div>
+			  ))
+	  	}
+  	</>
   )
 }
 
